@@ -24,11 +24,14 @@ body {
 .card {
   width: 427px;
   height: 640px;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 /* Card Hover */
 .card:hover .card__content {
   transform: rotateY(.5turn);
+
 }
 
 .card__content {
@@ -139,9 +142,3 @@ body {
   bottom: 2rem;
 }
 
-
-  // background-color: var(--clr);
-  // background-image: url("/images/fallen_angel.webp");
-  // background-size: cover;
-  // color: black;  
-// background-blend-mode: overlay;
