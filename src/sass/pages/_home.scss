@@ -110,8 +110,6 @@ body {
 
 }
 
-.card__list {
-}
 
 .card__list {
   transform: var(--level-two);
@@ -163,6 +161,8 @@ body {
     padding-right: 2em;
   }
 }
+
+/* add prefecrs reduced motion */ 
 
 @media (prefers-reduced-motion: no-preference){
   *,
