@@ -28,11 +28,7 @@ body {
   overflow: hidden;
 }
 
-/* Card Hover */
-.card:hover .card__content {
-  transform: rotateY(.5turn);
 
-}
 
 .card__content {
   text-align: center;
@@ -140,5 +136,43 @@ body {
   transform: var(--level-two);
   position: absolute;
   bottom: 2rem;
+}
+
+/* Card Hover */
+
+@media (hover) {
+  .card:hover .card__content {
+  transform: rotateY(.5turn);
+}
+}
+
+@media not (hover) {
+  .card__front {
+    display: none;
+  }
+
+  .card__back {
+    transform: rotateY(0turn);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2em;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
 }
 
